@@ -47,6 +47,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.define :kibana_test_log do |log|
     log.vm.network :forwarded_port, guest: 80, host: 8082
+    log.vm.network :forwarded_port, guest: 9200, host: 9200
     log.vm.network :private_network, ip: "192.168.0.11", virtualbox__intnet: "intnet"
     log.vm.provider :virtualbox do |vb|
       vb.customize ["modifyvm", :id, "--memory", "1024"]

@@ -11,6 +11,7 @@
   tag_key @log_name
   host localhost
   port 9200
-  logstash_format true
+  logstash_prefix logstash
+  logstash_format %Y.%m.%d
   flush_interval 1s
 </match>
