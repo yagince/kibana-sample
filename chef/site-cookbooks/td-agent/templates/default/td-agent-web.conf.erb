@@ -1,0 +1,16 @@
+<source>
+  type tail
+  format ltsv
+  path /var/log/nginx/access.log
+  tag nginx.access
+  time_format %d/%b/%Y:%H:%M:%S %z
+</source>
+
+<match **>
+  type forward
+  <server>
+    host 192.168.0.11
+    port 24224
+  </server>
+  flush_interval 1s
+</match>

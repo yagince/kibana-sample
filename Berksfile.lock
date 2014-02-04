@@ -1,14 +1,24 @@
 {
   "sources": {
-    "yum": {
-      "locked_version": "2.4.4",
-      "git": "https://github.com/opscode-cookbooks/yum.git",
-      "ref": "7402168bd8b87ba069a491571fd366c0267ecba4"
-    },
     "nginx": {
       "locked_version": "2.0.1",
       "git": "https://github.com/yagince/nginx.git",
       "ref": "88bdd04823a11b1b2af622d8d5e4e653515ce73f"
+    },
+    "td-agent": {
+      "locked_version": "0.0.1",
+      "git": "https://github.com/treasure-data/chef-td-agent.git",
+      "ref": "6e308742d76dbd10a9ac0444df8c9082b2ecf18c"
+    },
+    "kibana": {
+      "locked_version": "1.2.0",
+      "git": "https://github.com/lusis/chef-kibana.git",
+      "ref": "d993f1a82e5b59c90f71b7905deba0ff1b257970"
+    },
+    "elasticsearch": {
+      "locked_version": "0.3.7",
+      "git": "https://github.com/elasticsearch/cookbook-elasticsearch.git",
+      "ref": "53fa45ce918fb7a4c7b99686bbc86c69c3a468e7"
     },
     "apt": {
       "locked_version": "2.3.4"
@@ -28,8 +38,38 @@
     "runit": {
       "locked_version": "1.5.8"
     },
+    "yum": {
+      "locked_version": "3.0.6"
+    },
     "yum-epel": {
       "locked_version": "0.2.0"
+    },
+    "git": {
+      "locked_version": "2.9.0"
+    },
+    "dmg": {
+      "locked_version": "2.1.4"
+    },
+    "windows": {
+      "locked_version": "1.12.8"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "apache2": {
+      "locked_version": "1.8.14"
+    },
+    "ark": {
+      "locked_version": "0.4.2"
+    },
+    "xml": {
+      "locked_version": "1.2.0"
+    },
+    "java": {
+      "locked_version": "1.19.2"
+    },
+    "monit": {
+      "locked_version": "0.7.1"
     }
   }
 }
