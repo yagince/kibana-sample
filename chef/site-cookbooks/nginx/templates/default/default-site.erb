@@ -18,8 +18,26 @@ server {
                       'cache:$upstream_http_x_cache\t'
                       'runtime:$upstream_http_x_runtime\t'
                       'vhost:$host';
+  log_format json '{'
+                  '"time":"$time_local",'
+                  '"msec":$msec,'
+                  '"host":"$remote_addr",'
+                  '"forwardedfor":"$http_x_forwarded_for",'
+                  '"req":"$request",'
+                  '"method":"$request_method",'
+                  '"uri":"$request_uri",'
+                  '"status":"$status",'
+                  '"size":$body_bytes_sent,'
+                  '"referer":"$http_referer",'
+                  '"ua":"$http_user_agent",'
+                  '"reqtime":$request_time,'
+                  '"upsttime":"$upstream_response_time",'
+                  '"cache":"$upstream_http_x_cache",'
+                  '"runtime":"$upstream_http_x_runtime",'
+                  '"vhost":"$host"'
+                  '}';
 
-  access_log  /var/log/nginx/access.log  ltsv;
+  access_log  /var/log/nginx/access.log  json;
   <% else %>
   access_log  /var/log/nginx/access.log;
   <% end %>
