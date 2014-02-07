@@ -38,6 +38,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
           echo_sleep: [1,3,5]
         },
         td_agent: {
+          plugins: ['record-reformer'],
           api_key: 'kibana_test_web',
           base_conf_template: "td-agent-web.conf.erb"
         }

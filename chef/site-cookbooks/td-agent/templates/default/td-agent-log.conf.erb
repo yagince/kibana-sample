@@ -3,7 +3,7 @@
   port 24224
 </source>
 
-<match nginx.*>
+<match es.nginx.**>
   index_name adminpack
   type_name nginx
   type elasticsearch
@@ -12,5 +12,19 @@
   host localhost
   port 9200
   logstash_format true
+  logstash_prefix nginx
+  flush_interval 1s
+</match>
+
+<match es.other.**>
+  index_name adminpack
+  type_name nginx
+  type elasticsearch
+  include_tag_key true
+  tag_key @log_name
+  host localhost
+  port 9200
+  logstash_format true
+  logstash_prefix other
   flush_interval 1s
 </match>
