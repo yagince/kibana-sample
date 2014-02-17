@@ -20,6 +20,11 @@
       "git": "https://github.com/elasticsearch/cookbook-elasticsearch.git",
       "ref": "53fa45ce918fb7a4c7b99686bbc86c69c3a468e7"
     },
+    "htpasswd": {
+      "locked_version": "0.0.3",
+      "git": "https://github.com/Youscribe/htpasswd-cookbook.git",
+      "ref": "197a76b9f16baa9c240f030330e6f96c8ef5fd87"
+    },
     "apt": {
       "locked_version": "2.3.4"
     },

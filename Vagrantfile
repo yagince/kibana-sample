@@ -58,6 +58,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     log.vm.provision :chef_solo do |chef|
       chef.cookbooks_path = ["./chef/cookbooks/","./chef/site-cookbooks/"]
       chef.add_recipe "nginx"
+      chef.add_recipe "htpasswd"
       chef.add_recipe "java"
       chef.add_recipe "elasticsearch"
       chef.add_recipe "kibana"
